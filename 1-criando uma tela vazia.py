@@ -14,6 +14,7 @@ def exibe_janela_vazia_e_faz_nada():
 
     # display significa tela. Precisamos configurar o modo de exibição da tela > suas dimensões > sua altura e largura
     pygame.display.set_mode(tupla_largura_altura)
+    
     # init significa iniciar > iniciar o programa, exibindo sua janela
     pygame.display.init()
     ... # não fazemos nada
