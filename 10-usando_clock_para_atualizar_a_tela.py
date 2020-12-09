@@ -29,7 +29,7 @@ def exibe_janela_e_usa_clock_para_atualizar_a_tela_numa_certa_frequencia():
         largura_altura_do_PAINEL_1 = (largura_do_PAINEL_1, altura_do_PAINEL_1)        
         PAINEL_1 = pygame.surface.Surface(largura_altura_do_PAINEL_1)       
         # pintando o painel com a cor desejada
-        cor_do_PAINEL_1 = (255, 255, 255)  # branco
+        cor_do_PAINEL_1 = (255, 255, 255)  # branco 
         PAINEL_1.fill(cor_do_PAINEL_1) 
 
         x_inicial_do_PAINEL_1 = 0
