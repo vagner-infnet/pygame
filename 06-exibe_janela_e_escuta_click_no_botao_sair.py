@@ -2,7 +2,7 @@
 exibindo uma tela vazia.
 a tela abre.
 escutamos o click no botão SAIR da janela
-a tela fecha automatiamente.
+para fechar a tela.
 """
 import pygame
 
@@ -11,10 +11,8 @@ def exibe_janela_e_escuta_click_no_botao_sair():
     largura_da_JANELA = 400
     altura_da_JANELA = 400
     tupla_largura_altura = (largura_da_JANELA, altura_da_JANELA)
-
-    # display significa tela. Precisamos configurar o modo de exibição da tela > suas dimensões > sua altura e largura
     pygame.display.set_mode(tupla_largura_altura)
-    # init significa iniciar > iniciar o programa, exibindo sua janela
+    pygame.display.set_caption("Pressione o botão sair para encerrar.")
     pygame.display.init()
 
     print(f"pygame.KEYDOWN: {pygame.KEYDOWN}")  # KEYDOWN == TECLA PRESSIONADA > 768
@@ -33,7 +31,6 @@ def exibe_janela_e_escuta_click_no_botao_sair():
             contador = contador + 1
             if event.type == pygame.QUIT:
                 continuar_no_loop_while = False
-                continue  # sair deste loop for
     ####################################################
     # após ter feito tudo que queríamos, fechamos o programa:
     #pygame.display.quit() 
