@@ -20,13 +20,16 @@ def exibe_janela_e_desenha_1forma():
     altura_do_PAINEL_1 = altura_da_JANELA/2       
     largura_altura_do_PAINEL_1 = (largura_do_PAINEL_1, altura_do_PAINEL_1)
     PAINEL_1 = pygame.surface.Surface(largura_altura_do_PAINEL_1)
-
+    ####################################################
+    # não houve necessidade de resetar a janela
+    # pois o painel é inserido(blit) sempre na mesma posição
+    ####################################################
+    # apenas o conteúdo do painel precisa ser resetado
+    # para receber(blit) o novo desenho numa nova posição
     def reseta_painel_1():
         print("desenhando painel_1")
         cor_do_PAINEL_1 = (255, 255, 255)  # branco
         PAINEL_1.fill(cor_do_PAINEL_1)  # pintando o painel com a cor desejada
-    #
-    reseta_painel_1()
     ####################################################
     #configurando superfície
     def forma_1(contador):
@@ -38,7 +41,6 @@ def exibe_janela_e_desenha_1forma():
         largura_da_FORMA_1 = contador        
         altura_da_FORMA_1 = contador 
         pygame.draw.rect(PAINEL_1, cor_da_FORMA_1, (x_inicial_da_FORMA_1, y_inicial_da_FORMA_1, largura_da_FORMA_1, altura_da_FORMA_1))
-        #
     ####################################################
     continuar_no_loop_while = True
     contador = 0
