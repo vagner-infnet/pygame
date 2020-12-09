@@ -26,7 +26,7 @@ def exibe_janela_e_cria_superficie():
         largura_do_PAINEL_1 = contador
         altura_do_PAINEL_1 = contador
         largura_altura_do_PAINEL_1 = (largura_do_PAINEL_1, altura_do_PAINEL_1)
-        
+        # criando o painel com as dimensões desejadas
         PAINEL_1 = pygame.surface.Surface(largura_altura_do_PAINEL_1)       
         # pintando o painel com a cor desejada
         cor_do_PAINEL_1 = (255, 255, 255)  # branco
@@ -34,7 +34,8 @@ def exibe_janela_e_cria_superficie():
         
         x_inicial_do_PAINEL_1 = 0
         y_inicial_do_PAINEL_1 = 0
-        JANELA.blit(PAINEL_1, (x_inicial_do_PAINEL_1, y_inicial_do_PAINEL_1))  # inserindo o painel na janela
+        # inserindo(blit) o painel na janela
+        JANELA.blit(PAINEL_1, (x_inicial_do_PAINEL_1, y_inicial_do_PAINEL_1))  
     ####################################################
     continuar_no_loop_while = True
     contador = 0
