@@ -27,9 +27,10 @@ def exibe_janela_e_cria_superficie():
         altura_do_PAINEL_1 = contador
         largura_altura_do_PAINEL_1 = (largura_do_PAINEL_1, altura_do_PAINEL_1)
         # criando o painel com as dimensões desejadas
+        # depois poderemos desenhar formas ou inserir textos neste painel
         PAINEL_1 = pygame.surface.Surface(largura_altura_do_PAINEL_1)       
         # pintando o painel com a cor desejada
-        cor_do_PAINEL_1 = (255, 255, 255)  # branco
+        cor_do_PAINEL_1 = (255, 255, 255)  # branco 
         PAINEL_1.fill(cor_do_PAINEL_1)  
         
         x_inicial_do_PAINEL_1 = 0
