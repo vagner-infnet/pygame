@@ -1,9 +1,3 @@
-"""
-exibindo uma tela vazia.
-a tela abre.
-redesenhado superfície numa frequência desejada
-a tela fecha automatiamente.
-"""
 import pygame
 
 def exibe_janela_e_atualiza_1componente_numa_frequencia_desejada():

@@ -1,4 +1,6 @@
 """
+Faremos um painel(superfície) começar com tamanho 0 
+e crescer até o tamanho da janela
 """
 import pygame
 
