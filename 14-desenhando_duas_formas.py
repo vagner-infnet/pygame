@@ -22,7 +22,10 @@ def exibe_janela_e_desenha_2formas():
     PAINEL_1 = pygame.surface.Surface(largura_altura_do_PAINEL_1)
     ####################################################
     # não houve necessidade de resetar a janela
+    # pois o painel é inserido(blit) sempre na mesma posição
     ####################################################
+    # apenas o conteúdo do painel precisa ser resetado
+    # para receber(blit) o novo desenho numa nova posição
     def reseta_painel_1():
         print("desenhando painel_1")
         cor_do_PAINEL_1 = (255, 255, 255)  # branco
