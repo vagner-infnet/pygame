@@ -23,6 +23,7 @@ def exibe_janela_vazia_e_faz_algo():
         contador = contador + 1
         if contador == 1000:
             continuar_no_programa = False
+            #próximo while não será executado
     ####################################################
     # após ter feito tudo que queríamos, fechamos o programa:
     #pygame.display.quit()
