@@ -1,8 +1,7 @@
 """
 exibindo uma tela vazia.
 a tela abre.
-escutamos o click em alguns botões
-a partir de agora, o botão sair fecha a janela.
+escutamos o click em algumas teclas
 """
 import pygame
 
@@ -10,9 +9,9 @@ def exibe_janela_e_escuta_click_em_varios_botoes():
     
     largura_da_JANELA = 400
     altura_da_JANELA = 400
-    tupla_largura_altura = (largura_da_JANELA, altura_da_JANELA)
-    pygame.display.set_mode(tupla_largura_altura)
-    pygame.display.set_caption("Pressione o botão sair para encerrar.")
+    largura_altura_da_JANELA = (largura_da_JANELA, altura_da_JANELA)
+    pygame.display.set_mode(largura_altura_da_JANELA)
+    pygame.display.set_caption("Pressione a setas esquerda, direita e letra A.")
     pygame.display.init()
 
     continuar_no_loop_while = True

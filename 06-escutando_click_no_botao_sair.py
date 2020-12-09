@@ -3,6 +3,7 @@ exibindo uma tela vazia.
 a tela abre.
 escutamos o click no botão SAIR da janela
 para fechar a tela.
+a partir de agora, o botão sair fecha a janela.
 """
 import pygame
 
@@ -10,11 +11,11 @@ def exibe_janela_e_escuta_click_no_botao_sair():
     
     largura_da_JANELA = 400
     altura_da_JANELA = 400
-    tupla_largura_altura = (largura_da_JANELA, altura_da_JANELA)
-    pygame.display.set_mode(tupla_largura_altura)
+    largura_altura_da_JANELA = (largura_da_JANELA, altura_da_JANELA)
+    pygame.display.set_mode(largura_altura_da_JANELA)
     pygame.display.set_caption("Pressione o botão sair para encerrar.")
     pygame.display.init()
-
+    ####################################################
     continuar_no_loop_while = True
     contador = 0
     ####################################################

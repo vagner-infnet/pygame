@@ -34,8 +34,8 @@ def exibe_janela_e_desenha_2formas():
     #configurando superfície
     def forma_1(contador):
         print("desenhando forma_1")
-        x_inicial_da_FORMA_1 = 0
-        y_inicial_da_FORMA_1 = 0
+        distancia_da_esq_para_a_dir_da_FORMA_1 = 0
+        distancia_de_cima_para_baixo_da_FORMA_1 = 0
         largura_da_FORMA_1 = contador        
         altura_da_FORMA_1 = contador  
         # evitando que o desenho superior cresça e cubra o desenho inferior
@@ -43,29 +43,29 @@ def exibe_janela_e_desenha_2formas():
             altura_da_FORMA_1 = altura_do_PAINEL_1/2    
         cor_da_FORMA_1 = (0, 0, 255)  # azul
         # desenhando no painel
-        pygame.draw.rect(PAINEL_1, cor_da_FORMA_1, (x_inicial_da_FORMA_1, y_inicial_da_FORMA_1, largura_da_FORMA_1, altura_da_FORMA_1))
+        pygame.draw.rect(PAINEL_1, cor_da_FORMA_1, (distancia_da_esq_para_a_dir_da_FORMA_1, distancia_de_cima_para_baixo_da_FORMA_1, largura_da_FORMA_1, altura_da_FORMA_1))
     def forma_2(contador):
         print("desenhando forma_2")
-        x_inicial_da_FORMA_2 = 0
-        y_inicial_da_FORMA_2 = altura_do_PAINEL_1/2
+        distancia_da_esq_para_a_dir_da_FORMA_2 = 0
+        distancia_de_cima_para_baixo_da_FORMA_2 = altura_do_PAINEL_1/2
         largura_da_FORMA_2 = contador
         altura_da_FORMA_2 = contador       
         cor_da_FORMA_2 = (255, 0, 0)  # vermelho
         # desenhando no painel
-        pygame.draw.rect(PAINEL_1, cor_da_FORMA_2, (x_inicial_da_FORMA_2, y_inicial_da_FORMA_2, largura_da_FORMA_2, altura_da_FORMA_2))
+        pygame.draw.rect(PAINEL_1, cor_da_FORMA_2, (distancia_da_esq_para_a_dir_da_FORMA_2, distancia_de_cima_para_baixo_da_FORMA_2, largura_da_FORMA_2, altura_da_FORMA_2))
         ####################################################
     continuar_no_loop_while = True
     contador = 0
     #################################################### 
     while continuar_no_loop_while:
-        ######################################
+        
         events = pygame.event.get()
         
         for event in events:
 
             if event.type == pygame.QUIT:
                 continuar_no_loop_while = False
-                #continue  # sair deste loop for
+                continue  # sair deste loop for, sem executar as demais linhas dentro de while
         contador = contador + 1
         # apagando o conteúdo do painel
         reseta_painel_1()
@@ -74,9 +74,9 @@ def exibe_janela_e_desenha_2formas():
         # desenhando a forma 2, com novo valor
         forma_2(contador)
         # inserindo o painel, que teve as formas redesenhadas, na janela
-        y_inicial_do_PAINEL_1 = 0
-        x_inicial_do_PAINEL_1 = 0
-        JANELA.blit(PAINEL_1, (x_inicial_do_PAINEL_1, y_inicial_do_PAINEL_1))  
+        distancia_de_cima_para_baixo_do_PAINEL_1 = 0
+        distancia_da_esq_para_a_dir_do_PAINEL_1 = 0
+        JANELA.blit(PAINEL_1, (distancia_da_esq_para_a_dir_do_PAINEL_1, distancia_de_cima_para_baixo_do_PAINEL_1))  
         # Fazendo a janela exibir os componentes com seus valores atualizados
         pygame.display.update()
         # nº de atualizações e loops while por segundo

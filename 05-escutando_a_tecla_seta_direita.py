@@ -10,11 +10,11 @@ def exibe_janela_e_escuta_a_seta_direita():
     
     largura_da_JANELA = 400
     altura_da_JANELA = 400
-    tupla_largura_altura = (largura_da_JANELA, altura_da_JANELA)
-    pygame.display.set_mode(tupla_largura_altura)
+    largura_altura_da_JANELA = (largura_da_JANELA, altura_da_JANELA)
+    pygame.display.set_mode(largura_altura_da_JANELA)
     pygame.display.set_caption("Pressione a seta para a direita para encerrar.")
     pygame.display.init()
-
+    ####################################################
     continuar_no_loop_while = True
     contador = 0
     ####################################################

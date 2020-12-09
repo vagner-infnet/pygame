@@ -11,11 +11,11 @@ def exibe_janela_vazia_e_faz_nada():
     #configurando as dimensões da janela
     largura_da_JANELA = 400
     altura_da_JANELA = 400
-    tupla_largura_altura = (largura_da_JANELA, altura_da_JANELA)
+    largura_altura_da_JANELA = (largura_da_JANELA, altura_da_JANELA)
 
     # display significa tela/janela. 
     # set_mode() recebe as dimensões em forma de tupla
-    pygame.display.set_mode(tupla_largura_altura)
+    pygame.display.set_mode(largura_altura_da_JANELA)
     
     # init significa iniciar > 
     # iniciamos o programa, exibindo sua janela

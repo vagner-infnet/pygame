@@ -36,11 +36,11 @@ def exibe_janela_e_desenha_1forma():
         print("desenhando forma_1") 
         
         cor_da_FORMA_1 = (0, 0, 255)  # azul
-        x_inicial_da_FORMA_1 = 0
-        y_inicial_da_FORMA_1 = 0
+        distancia_da_esq_para_a_dir_da_FORMA_1 = 0
+        distancia_de_cima_para_baixo_da_FORMA_1 = 0
         largura_da_FORMA_1 = contador        
         altura_da_FORMA_1 = contador 
-        pygame.draw.rect(PAINEL_1, cor_da_FORMA_1, (x_inicial_da_FORMA_1, y_inicial_da_FORMA_1, largura_da_FORMA_1, altura_da_FORMA_1))
+        pygame.draw.rect(PAINEL_1, cor_da_FORMA_1, (distancia_da_esq_para_a_dir_da_FORMA_1, distancia_de_cima_para_baixo_da_FORMA_1, largura_da_FORMA_1, altura_da_FORMA_1))
     ####################################################
     continuar_no_loop_while = True
     contador = 0
@@ -53,7 +53,7 @@ def exibe_janela_e_desenha_1forma():
 
             if event.type == pygame.QUIT:
                 continuar_no_loop_while = False
-                #continue  # sair deste loop for
+                continue  # sair deste loop for, sem executar as demais linhas dentro de while
         contador = contador + 1
         if contador == altura_do_PAINEL_1:
             contador = 0
@@ -63,9 +63,9 @@ def exibe_janela_e_desenha_1forma():
         # desenhando novamente, com um novo valor do contador
         forma_1(contador)
         # inserindo o painel na janela
-        x_inicial_do_PAINEL_1 = 0
-        y_inicial_do_PAINEL_1 = 0
-        JANELA.blit(PAINEL_1, (x_inicial_do_PAINEL_1, y_inicial_do_PAINEL_1))  
+        distancia_da_esq_para_a_dir_do_PAINEL_1 = 0
+        distancia_de_cima_para_baixo_do_PAINEL_1 = 0
+        JANELA.blit(PAINEL_1, (distancia_da_esq_para_a_dir_do_PAINEL_1, distancia_de_cima_para_baixo_do_PAINEL_1))  
         # Fazendo a janela exibir os componentes com seus valores atualizados
         pygame.display.update()
         # nº de loops e atualizações por segundo

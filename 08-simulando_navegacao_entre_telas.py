@@ -9,8 +9,8 @@ def exibe_janela_e_simula_navegacao_entre_telas():
     
     largura_da_JANELA = 400
     altura_da_JANELA = 400
-    tupla_largura_altura = (largura_da_JANELA, altura_da_JANELA)
-    pygame.display.set_mode(tupla_largura_altura)
+    largura_altura_da_JANELA = (largura_da_JANELA, altura_da_JANELA)
+    pygame.display.set_mode(largura_altura_da_JANELA)
     pygame.display.set_caption("Simulando navegação entre telas")
     pygame.display.init()
 
@@ -18,14 +18,14 @@ def exibe_janela_e_simula_navegacao_entre_telas():
     tela_atual = "tela_principal"
     ####################################################
     while continuar_no_loop_while:
-        ######################################
+
         events = pygame.event.get()
         
         for event in events:
 
             if event.type == pygame.QUIT:
                 continuar_no_loop_while = False
-                #continue  # sair deste loop for
+                continue  # sair deste loop for, sem executar as demais linhas dentro de while
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_RIGHT:
                     print("seta para direita pressionada")   
