@@ -58,7 +58,8 @@ def exibe_janela_e_usa_clock_para_atualizar_a_tela_numa_certa_frequencia():
         set_painel_1(contador)
         # Fazendo a janela exibir os componentes com seus valores atualizados
         pygame.display.update()
-        pygame.time.Clock().tick(60) # nº de whiles por segundo
+        # clock permite acelerar/desacelerar o número de whiles por segundo
+        pygame.time.Clock().tick(60)
     ####################################################
     # após ter feito tudo que queríamos, fechamos o programa:
     #pygame.display.quit() 
