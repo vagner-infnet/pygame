@@ -15,10 +15,6 @@ def exibe_janela_e_escuta_click_no_botao_sair():
     pygame.display.set_caption("Pressione o botão sair para encerrar.")
     pygame.display.init()
 
-    print(f"pygame.KEYDOWN: {pygame.KEYDOWN}")  # KEYDOWN == TECLA PRESSIONADA > 768
-    print(f"pygame.KEYUP: {pygame.KEYUP}")  # KEYUP == TECLA LIBERADA > 769
-    print(f"pygame.QUIT: {pygame.QUIT}")  # QUIT == X DA JANELA, PARA SAIR > 256
-
     continuar_no_loop_while = True
     contador = 0
     ####################################################

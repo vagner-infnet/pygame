@@ -14,6 +14,10 @@ def exibe_janela_e_cria_superficie():
     pygame.display.set_caption("Criando uma painel")
     pygame.display.init()
     ####################################################
+    def reseta_JANELA():
+        #pintamos a janela, para apagar seu conteúdo
+        cor_da_JANELA = (0, 0, 0)  # preto
+        JANELA.fill(cor_da_JANELA)
     #configurando superfície
     def set_painel_1(contador):
 
@@ -21,22 +25,15 @@ def exibe_janela_e_cria_superficie():
 
         largura_do_PAINEL_1 = 100 + contador
         altura_do_PAINEL_1 = 100 + contador
-
-        x_inicial_do_PAINEL_1 = 0
-        y_inicial_do_PAINEL_1 = 0
-
         largura_altura_do_PAINEL_1 = (largura_do_PAINEL_1, altura_do_PAINEL_1)
         
-        PAINEL_1 = pygame.surface.Surface(largura_altura_do_PAINEL_1)
-       
+        PAINEL_1 = pygame.surface.Surface(largura_altura_do_PAINEL_1)       
         # pintando o painel com a cor desejada
         cor_do_PAINEL_1 = (255, 255, 255)  # branco
         PAINEL_1.fill(cor_do_PAINEL_1)  
         
-        #pintamos a janela, para apagar seu conteúdo
-        cor_da_JANELA = (0, 0, 0)  # preto
-        JANELA.fill(cor_da_JANELA)
-        #desenhamos(blit) o painel na janela
+        x_inicial_do_PAINEL_1 = 0
+        y_inicial_do_PAINEL_1 = 0
         JANELA.blit(PAINEL_1, (x_inicial_do_PAINEL_1, y_inicial_do_PAINEL_1))  # inserindo o painel na janela
     ####################################################
     continuar_no_loop_while = True
@@ -56,6 +53,7 @@ def exibe_janela_e_cria_superficie():
         if contador > 400:
             #faremos o painel começar do zero, novamente
             contador = 0
+        reseta_JANELA()
         set_painel_1(contador)
         # Fazendo a janela exibir os componentes com seus valores atualizados
         pygame.display.update()

@@ -15,28 +15,25 @@ def exibe_janela_e_usa_clock_para_atualizar_a_tela_numa_certa_frequencia():
     pygame.display.set_caption("Usando Clock")
     pygame.display.init()
     ####################################################
+    def reseta_JANELA():
+        #pintamos a janela, para apagar seu conteúdo
+        cor_da_JANELA = (0, 0, 0)  # preto
+        JANELA.fill(cor_da_JANELA)
     #configurando superfície
     def set_painel_1(contador):
 
         print("desenhando painel_1")
 
-        largura_do_PAINEL_1 = 100 + contador
-        altura_do_PAINEL_1 = 100 + contador
+        largura_do_PAINEL_1 = contador
+        altura_do_PAINEL_1 = contador
+        largura_altura_do_PAINEL_1 = (largura_do_PAINEL_1, altura_do_PAINEL_1)        
+        PAINEL_1 = pygame.surface.Surface(largura_altura_do_PAINEL_1)       
+        # pintando o painel com a cor desejada
+        cor_do_PAINEL_1 = (255, 255, 255)  # branco
+        PAINEL_1.fill(cor_do_PAINEL_1) 
 
         x_inicial_do_PAINEL_1 = 0
         y_inicial_do_PAINEL_1 = 0
-
-        largura_altura_do_PAINEL_1 = (largura_do_PAINEL_1, altura_do_PAINEL_1)
-        
-        PAINEL_1 = pygame.surface.Surface(largura_altura_do_PAINEL_1)
-       
-        # pintando o painel com a cor desejada
-        cor_do_PAINEL_1 = (255, 255, 255)  # branco
-        PAINEL_1.fill(cor_do_PAINEL_1)  
-        
-        #pintamos a janela, para apagar seu conteúdo
-        cor_da_JANELA = (0, 0, 0)  # preto
-        JANELA.fill(cor_da_JANELA)
         #desenhamos(blit) o painel na janela
         JANELA.blit(PAINEL_1, (x_inicial_do_PAINEL_1, y_inicial_do_PAINEL_1))  # inserindo o painel na janela
     ####################################################
@@ -57,6 +54,7 @@ def exibe_janela_e_usa_clock_para_atualizar_a_tela_numa_certa_frequencia():
         if contador > 400:
             #faremos o painel começar do zero, novamente
             contador = 0
+        reseta_JANELA()
         set_painel_1(contador)
         # Fazendo a janela exibir os componentes com seus valores atualizados
         pygame.display.update()
