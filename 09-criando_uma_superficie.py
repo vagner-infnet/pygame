@@ -15,7 +15,8 @@ def exibe_janela_e_cria_superficie():
     pygame.display.init()
     ####################################################
     def reseta_JANELA():
-        #pintamos a janela, para apagar seu conteúdo
+        # pintamos a janela, para apagar seu conteúdo:
+        # quando pintamos uma janela, os painéis que foram inserido via blit() são apagados dela.
         cor_da_JANELA = (0, 0, 0)  # preto
         JANELA.fill(cor_da_JANELA)
     #configurando superfície
