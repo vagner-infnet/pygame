@@ -30,7 +30,7 @@ def exibe_janela_e_desenha_1forma():
     ####################################################
     #configurando superfície
     def forma_1(contador):
-        print("desenhando forma_1")
+        print("desenhando forma_1") 
         
         cor_da_FORMA_1 = (0, 0, 255)  # azul
         x_inicial_da_FORMA_1 = 0
