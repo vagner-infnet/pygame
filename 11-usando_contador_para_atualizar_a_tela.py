@@ -66,6 +66,9 @@ def exibe_janela_e_usa_clock_para_atualizar_a_tela_numa_certa_frequencia():
                 contador = 0
             set_painel_1(contador)         
             pygame.display.update()
+
+        # um clock alto mantém o while acelerado, para checar o QUIT
+        # O contador_de_whiles vai acelerar/retardar a atualização da tela.
         pygame.time.Clock().tick(60) # nº de whiles por segundo
     ####################################################
     # após ter feito tudo que queríamos, fechamos o programa:
