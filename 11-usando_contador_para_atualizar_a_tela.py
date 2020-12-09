@@ -16,7 +16,8 @@ def exibe_janela_e_usa_clock_para_atualizar_a_tela_numa_certa_frequencia():
     pygame.display.init()
     ####################################################
     def reseta_JANELA():
-        #pintamos a janela, para apagar seu conteúdo
+        # pintamos a janela, para apagar seu conteúdo
+        # tudo que foi inserido na janela via blit() é apagado
         cor_da_JANELA = (0, 0, 0)  # preto
         JANELA.fill(cor_da_JANELA)
     #configurando superfície
