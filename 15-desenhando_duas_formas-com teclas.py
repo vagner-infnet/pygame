@@ -1,8 +1,7 @@
 """
 exibindo uma tela vazia.
 a tela abre.
-redesenhado 2 formas numa superfície com direta, esquerda e espaço
-a tela fecha automatiamente.
+redesenhado 2 formas numa superfície com as teclas: direta, esquerda e espaço
 """
 import pygame
 
@@ -10,24 +9,21 @@ def exibe_janela_e_desenha_2formas_com_teclas():
     
     largura_da_JANELA = 400
     altura_da_JANELA = 400
-    tupla_largura_altura = (largura_da_JANELA, altura_da_JANELA)
+    largura_altura_da_JANELA = (largura_da_JANELA, altura_da_JANELA)
     #JANELA > PRECISAMOS GRAVAR UMA REFERÊNCIA DA JANELA DO PROGRAMA
-    JANELA = pygame.display.set_mode(tupla_largura_altura)
-    pygame.display.set_caption("Desenhando duas formas")
+    JANELA = pygame.display.set_mode(largura_altura_da_JANELA)
+    pygame.display.set_caption("Desenhando duas formas com o teclado")
     pygame.display.init()
     ####################################################
     largura_do_PAINEL_1 = largura_da_JANELA/2
     altura_do_PAINEL_1 = altura_da_JANELA/2       
     largura_altura_do_PAINEL_1 = (largura_do_PAINEL_1, altura_do_PAINEL_1)
     PAINEL_1 = pygame.surface.Surface(largura_altura_do_PAINEL_1)
-
-    y_inicial_do_PAINEL_1 = 0
-    x_inicial_do_PAINEL_1 = 0
+    ####################################################
     def reseta_painel_1():
         print("desenhando painel_1")
         cor_do_PAINEL_1 = (255, 255, 255)  # branco
         PAINEL_1.fill(cor_do_PAINEL_1)  # pintando o painel com a cor desejada
-    reseta_painel_1()
     ####################################################
     #configurando superfície
     def forma_1(contador):
@@ -82,6 +78,8 @@ def exibe_janela_e_desenha_2formas_com_teclas():
         #forma_1(contador)
         #forma_2(contador)
         # Fazendo a janela exibir os componentes com seus valores atualizados
+        x_inicial_do_PAINEL_1 = 0
+        y_inicial_do_PAINEL_1 = 0
         JANELA.blit(PAINEL_1, (x_inicial_do_PAINEL_1, y_inicial_do_PAINEL_1))  # inserindo o painel na janela
         pygame.display.update()
         pygame.time.Clock().tick(60) # nº de atualizações por segundo
