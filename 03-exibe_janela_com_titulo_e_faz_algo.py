@@ -17,6 +17,7 @@ def exibe_janela_com_titulo_e_faz_algo():
     pygame.display.set_caption("Oi, mundo - ANTES DE ABRIR A JANELA!")
     pygame.display.init()
     # O título da janela poderia ser configurado DEPOIS de iniciar o programa
+    pygame.display.set_caption("Oi, mundo - DEPOIS DE ABRIR A JANELA!")
     # depois de iniciar, faremos algo:
     ####################################################
     continuar_no_programa = True
@@ -29,6 +30,7 @@ def exibe_janela_com_titulo_e_faz_algo():
     ####################################################
     # O título da janela poderia ser configurado depois de fazer algo
     pygame.display.set_caption("Oi, mundo - DEPOIS DE FAZER ALGO")
+    ####################################################
     continuar_no_programa = True
     contador = 0
     while continuar_no_programa:
@@ -36,6 +38,7 @@ def exibe_janela_com_titulo_e_faz_algo():
         contador = contador + 1
         if contador == 1000:
             continuar_no_programa = False
+    ####################################################
     # após ter feito tudo que queríamos, fechamos o programa:
     #pygame.display.quit()
 
