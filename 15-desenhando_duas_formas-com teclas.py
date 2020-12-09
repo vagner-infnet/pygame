@@ -32,7 +32,7 @@ def exibe_janela_e_desenha_2formas_com_teclas():
         y_inicial_da_FORMA_1 = 0
         largura_da_FORMA_1 = contador        
         altura_da_FORMA_1 = contador  
-        if altura_da_FORMA_1 > altura_do_PAINEL_1/2:  
+        if altura_da_FORMA_1 > altura_do_PAINEL_1/2:   
             altura_da_FORMA_1 = altura_do_PAINEL_1/2    
         cor_da_FORMA_1 = (0, 0, 255)  # azul
         pygame.draw.rect(PAINEL_1, cor_da_FORMA_1, (x_inicial_da_FORMA_1, y_inicial_da_FORMA_1, largura_da_FORMA_1, altura_da_FORMA_1))
