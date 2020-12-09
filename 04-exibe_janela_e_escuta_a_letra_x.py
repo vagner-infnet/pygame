@@ -1,7 +1,7 @@
 """
 exibindo uma tela vazia.
 a tela abre.
-escutamos a letra x
+escutamos o pressionamento da tecla X
 a tela fecha automatiamente.
 """
 import pygame
@@ -11,10 +11,8 @@ def exibe_janela_e_escuta_a_letra_x():
     largura_da_JANELA = 400
     altura_da_JANELA = 400
     tupla_largura_altura = (largura_da_JANELA, altura_da_JANELA)
-
-    # display significa tela. Precisamos configurar o modo de exibição da tela > suas dimensões > sua altura e largura
     pygame.display.set_mode(tupla_largura_altura)
-    # init significa iniciar > iniciar o programa, exibindo sua janela
+    pygame.display.set_caption("Pressione a tecla X para encerrar.")
     pygame.display.init()
 
     print(f"pygame.KEYDOWN: {pygame.KEYDOWN}")  # KEYDOWN == TECLA PRESSIONADA > 768
