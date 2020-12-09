@@ -2,7 +2,7 @@
 exibindo uma tela vazia.
 a tela abre.
 escutamos o pressionamento da tecla X
-a tela fecha automatiamente.
+para fechar a tela.
 """
 import pygame
 

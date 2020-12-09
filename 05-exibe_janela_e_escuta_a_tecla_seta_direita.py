@@ -2,19 +2,17 @@
 exibindo uma tela vazia.
 a tela abre.
 escutamos a seta direita
-a tela fecha automatiamente.
+para fechar a tela.
 """
 import pygame
 
-def exibe_janela_e_escuta_a_tecla_seta_direita():
+def exibe_janela_e_escuta_a_seta_direita():
     
     largura_da_JANELA = 400
     altura_da_JANELA = 400
     tupla_largura_altura = (largura_da_JANELA, altura_da_JANELA)
-
-    # display significa tela. Precisamos configurar o modo de exibição da tela > suas dimensões > sua altura e largura
     pygame.display.set_mode(tupla_largura_altura)
-    # init significa iniciar > iniciar o programa, exibindo sua janela
+    pygame.display.set_caption("Pressione a seta para a direita para encerrar.")
     pygame.display.init()
 
     print(f"pygame.KEYDOWN: {pygame.KEYDOWN}")  # KEYDOWN == TECLA PRESSIONADA > 768
@@ -33,10 +31,9 @@ def exibe_janela_e_escuta_a_tecla_seta_direita():
             contador = contador + 1
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_RIGHT:
-                    continuar_no_loop_while = False
-              
+                    continuar_no_loop_while = False              
     ####################################################
     # após ter feito tudo que queríamos, fechamos o programa:
     #pygame.display.quit() 
 
-exibe_janela_e_escuta_a_tecla_seta_direita()
+exibe_janela_e_escuta_a_seta_direita()
