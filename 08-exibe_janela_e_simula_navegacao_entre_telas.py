@@ -1,7 +1,7 @@
 """
 exibindo uma tela vazia.
 a tela abre.
-escutamos as setas e simulamos navegação entre telas
+escutamos as setas esquerda, direita e espaço e simulamos navegação entre telas
 a tela fecha automatiamente.
 """
 import pygame
@@ -11,10 +11,8 @@ def exibe_janela_e_simula_navegacao_entre_telas():
     largura_da_JANELA = 400
     altura_da_JANELA = 400
     tupla_largura_altura = (largura_da_JANELA, altura_da_JANELA)
-
-    # display significa tela. Precisamos configurar o modo de exibição da tela > suas dimensões > sua altura e largura
     pygame.display.set_mode(tupla_largura_altura)
-    # init significa iniciar > iniciar o programa, exibindo sua janela
+    pygame.display.set_caption("Simulando navegação entre telas")
     pygame.display.init()
 
     continuar_no_loop_while = True
