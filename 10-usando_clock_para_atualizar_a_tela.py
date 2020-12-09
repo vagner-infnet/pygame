@@ -1,30 +1,48 @@
+"""
+Faremos um painel(superfície) começar com tamanho 0 
+e crescer até o tamanho da janela.
+Usaremos Clock para a frequência de atualização da tela
+"""
 import pygame
 
-def exibe_janela_e_atualiza_1componente_numa_frequencia_desejada():
+def exibe_janela_e_usa_clock_para_atualizar_a_tela_numa_certa_frequencia():
     
     largura_da_JANELA = 400
     altura_da_JANELA = 400
-    largura_altura_da_JANELA = (largura_da_JANELA, altura_da_JANELA)
-
-    JANELA = pygame.display.set_mode(largura_altura_da_JANELA)  # ATENÇÃO >>> PRECISAMOS GRAVAR A REFERÊNCIA DA JANELA PRINCIPAL
+    tupla_largura_altura = (largura_da_JANELA, altura_da_JANELA)
+    #JANELA > PRECISAMOS GRAVAR UMA REFERÊNCIA DA JANELA DO PROGRAMA
+    JANELA = pygame.display.set_mode(tupla_largura_altura)
+    pygame.display.set_caption("Usando Clock")
     pygame.display.init()
     ####################################################
     #configurando superfície
-    def painel_1(contador):
+    def set_painel_1(contador):
+
         print("desenhando painel_1")
-        x_inicial_do_PAINEL_1 = 0
+
         largura_do_PAINEL_1 = 100 + contador
+        altura_do_PAINEL_1 = 100 + contador
+
+        x_inicial_do_PAINEL_1 = 0
         y_inicial_do_PAINEL_1 = 0
-        altura_do_PAINEL_1 = 100 + contador       
+
         largura_altura_do_PAINEL_1 = (largura_do_PAINEL_1, altura_do_PAINEL_1)
+        
         PAINEL_1 = pygame.surface.Surface(largura_altura_do_PAINEL_1)
+       
+        # pintando o painel com a cor desejada
         cor_do_PAINEL_1 = (255, 255, 255)  # branco
-        PAINEL_1.fill(cor_do_PAINEL_1)  # pintando o painel com a cor desejada
+        PAINEL_1.fill(cor_do_PAINEL_1)  
+        
+        #pintamos a janela, para apagar seu conteúdo
+        cor_da_JANELA = (0, 0, 0)  # preto
+        JANELA.fill(cor_da_JANELA)
+        #desenhamos(blit) o painel na janela
         JANELA.blit(PAINEL_1, (x_inicial_do_PAINEL_1, y_inicial_do_PAINEL_1))  # inserindo o painel na janela
     ####################################################
     continuar_no_loop_while = True
     contador = 0
-    ####################################################   
+    ####################################################
     while continuar_no_loop_while:
         ######################################
         events = pygame.event.get()
@@ -35,12 +53,16 @@ def exibe_janela_e_atualiza_1componente_numa_frequencia_desejada():
                 continuar_no_loop_while = False
                 #continue  # sair deste loop for
         contador = contador + 1
-        painel_1(contador)
+        #contador == 400 > o painel tomou a área total da janela
+        if contador > 400:
+            #faremos o painel começar do zero, novamente
+            contador = 0
+        set_painel_1(contador)
         # Fazendo a janela exibir os componentes com seus valores atualizados
         pygame.display.update()
-        pygame.time.Clock().tick(60) # nº de atualizações por segundo
+        pygame.time.Clock().tick(60) # nº de whiles por segundo
     ####################################################
     # após ter feito tudo que queríamos, fechamos o programa:
     #pygame.display.quit() 
 
-exibe_janela_e_atualiza_1componente_numa_frequencia_desejada()
+exibe_janela_e_usa_clock_para_atualizar_a_tela_numa_certa_frequencia()
