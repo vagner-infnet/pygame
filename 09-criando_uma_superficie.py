@@ -23,8 +23,8 @@ def exibe_janela_e_cria_superficie():
 
         print("desenhando painel_1")
 
-        largura_do_PAINEL_1 = 100 + contador
-        altura_do_PAINEL_1 = 100 + contador
+        largura_do_PAINEL_1 = contador
+        altura_do_PAINEL_1 = contador
         largura_altura_do_PAINEL_1 = (largura_do_PAINEL_1, altura_do_PAINEL_1)
         
         PAINEL_1 = pygame.surface.Surface(largura_altura_do_PAINEL_1)       
