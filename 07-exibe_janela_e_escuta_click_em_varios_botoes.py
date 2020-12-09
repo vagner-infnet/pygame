@@ -1,8 +1,8 @@
 """
 exibindo uma tela vazia.
 a tela abre.
-escutamos o click no botão SAIR da janela
-a tela fecha automatiamente.
+escutamos o click em alguns botões
+a partir de agora, o botão sair fecha a janela.
 """
 import pygame
 
